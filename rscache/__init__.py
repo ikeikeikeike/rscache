@@ -1,1 +1,1 @@
-from .rscache import __version__
+from .rscache import *  # NOQA
