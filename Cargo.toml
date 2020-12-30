@@ -1,0 +1,52 @@
+[package]
+name = "rscache"
+version = "0.1.0"
+authors = ["ikeikeikeike <jp.ne.co.jp@gmail.com>"]
+edition = "2018"
+license = "MIT"
+repository = "https://github.com/ikeikeike/rscache"
+homepage = "https://github.com/ikeikeike/rscache"
+readme = "README.md"
+keywords = ["fast", "cache", "python"]
+
+
+[package.metadata.maturin]
+classifier = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+]
+
+
+[dependencies]
+pyo3 = "0.13.0"
+
+
+[lib]
+name = "rscache"
+crate-type = ["rlib", "cdylib"]
+
+
+[features]
+default = ["pyo3/extension-module"]
+
+# [workspace]
+# members = [ "profiling" ]
+#
+# [profile.release]
+# codegen-units = 1
+# debug = false
+# incremental = false
+# lto = true
+# opt-level = 3
